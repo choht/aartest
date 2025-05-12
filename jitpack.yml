@@ -2,3 +2,5 @@
 jdk: 17
 install:
   - echo "skip build, only release aar"
+  - mkdir -p build/libs
+  - cp release/*.aar build/libs/
