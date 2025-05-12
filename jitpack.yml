@@ -1,0 +1,4 @@
+# jitpack.yml
+jdk: 17
+install:
+  - echo "skip build, only release aar"
