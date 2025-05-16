@@ -62,7 +62,7 @@ afterEvaluate {
                 groupId = 'com.github.choht' // GitHub 사용자명으로 변경
                 artifactId = 'aartest' // 저장소 이름으로 변경
                 version = '1.0.4' // 태그와 일치하는 버전
-                artifact("$buildDir/outputs/aar/standby_widget-1.0.4-release.aar")
+//                artifact("$buildDir/outputs/aar/standby_widget-1.0.4-release.aar")
             }
         }
     }
@@ -75,8 +75,7 @@ afterEvaluate {
 //}
 
 dependencies {
-//    implementation(name: 'standby_widget', ext: 'aar')
-    implementation files('libs/standby_widget.aar')
+//    implementation files('libs/standby_widget.aar')
 //
 //    implementation libs.androidx.core.ktx
 //    implementation libs.androidx.appcompat
