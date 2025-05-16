@@ -3,6 +3,8 @@ jdk: 17
 
 install:
   - echo "🔧 빌드 시작"
+  - java -version
+  - echo $JAVA_HOME
   - ./gradlew :standby_widget:assembleRelease
   - echo "✅ 빌드 완료, AAR 복사 중"
   - mkdir -p build/libs
