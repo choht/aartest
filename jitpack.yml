@@ -1,9 +1,9 @@
 # jitpack.yml
 jdk: 17
-# jitpack.yml
+
 install:
   - echo "🔧 빌드 시작"
   - ./gradlew :standby_widget:assembleRelease
   - echo "✅ 빌드 완료, AAR 복사 중"
   - mkdir -p build/libs
-  - cp standby_widget/build/outputs/aar/standby_widget-release.aar build/libs/standby_widget-release.aar
+  - cp release/standby_widget-release.aar build/libs/standby_widget-release.aar
