@@ -40,14 +40,14 @@ android {
         singleVariant("release")
     }
 
-//    compileOptions {
-//        sourceCompatibility JavaVersion.VERSION_1_8
-//        targetCompatibility JavaVersion.VERSION_1_8
-//    }
-//
-//    kotlinOptions {
-//        jvmTarget = '1.8'
-//    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
 //
 //    buildFeatures {
 //        viewBinding true
@@ -66,25 +66,4 @@ afterEvaluate {
             }
         }
     }
-}
-
-//android.libraryVariants.all { variant ->
-//    variant.outputs.all {
-//        outputFileName = "standby_widget-${android.defaultConfig.versionName}-${variant.buildType.name}.aar"
-//    }
-//}
-
-dependencies {
-//    implementation files('libs/standby_widget.aar')
-//
-//    implementation libs.androidx.core.ktx
-//    implementation libs.androidx.appcompat
-//    implementation libs.material
-//    implementation libs.androidx.legacy.support.v4
-//    implementation libs.androidx.activity
-//    implementation libs.androidx.constraintlayout
-//
-//    testImplementation libs.junit
-//    androidTestImplementation libs.androidx.junit
-//    androidTestImplementation libs.androidx.espresso.core
 }
