@@ -7,7 +7,7 @@ install:
   - echo $JAVA_HOME
   - ./gradlew :standby_widget:assembleRelease
   - echo "✅ 빌드 완료, AAR 복사 중"
-  - mkdir -p build/libs
-  - cp release/standby_widget-release.aar build/libs/standby_widget-release.aar
+#  - mkdir -p build/libs
+#  - cp release/standby_widget-release.aar build/libs/standby_widget-release.aar
   - echo "📦 build/libs 내용:"
   - ls -al build/libs/
