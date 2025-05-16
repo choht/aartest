@@ -16,7 +16,7 @@ android {
         minSdk 23
 
         versionCode 1
-        versionName "1.0.0"
+        versionName "1.0.3"
 
 //        archivesBaseName = "standby_widget"
 //
@@ -61,7 +61,7 @@ afterEvaluate {
                 from components.release
                 groupId = 'com.github.choht' // GitHub 사용자명으로 변경
                 artifactId = 'aartest' // 저장소 이름으로 변경
-                version = '1.0.0' // 태그와 일치하는 버전
+                version = '1.0.3' // 태그와 일치하는 버전
             }
         }
     }
