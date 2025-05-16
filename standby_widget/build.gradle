@@ -1,0 +1,88 @@
+plugins {
+    alias(libs.plugins.android.library)
+//    alias(libs.plugins.jetbrains.kotlin.android)
+    id("maven-publish")
+}
+
+android {
+    namespace 'com.siksin.standby_widget'
+    compileSdk 34
+
+    buildFeatures {
+        buildConfig true
+    }
+
+    defaultConfig {
+        minSdk 23
+
+        versionCode 1
+        versionName "1.0.0"
+
+//        archivesBaseName = "standby_widget"
+//
+//        buildConfigField "boolean", "DEBUG_MODE", "true"
+//        buildConfigField "String", "LIBRARY_VERSION", "\"$versionName\""
+//
+//        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+//        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+//            buildConfigField "boolean", "DEBUG_MODE", "false"
+
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    publishing {
+        singleVariant("release")
+    }
+
+//    compileOptions {
+//        sourceCompatibility JavaVersion.VERSION_1_8
+//        targetCompatibility JavaVersion.VERSION_1_8
+//    }
+//
+//    kotlinOptions {
+//        jvmTarget = '1.8'
+//    }
+//
+//    buildFeatures {
+//        viewBinding true
+//    }
+}
+
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                from components.release
+                groupId = 'com.github.choht' // GitHub 사용자명으로 변경
+                artifactId = 'aartest' // 저장소 이름으로 변경
+                version = '1.0.0' // 태그와 일치하는 버전
+            }
+        }
+    }
+}
+
+//android.libraryVariants.all { variant ->
+//    variant.outputs.all {
+//        outputFileName = "standby_widget-${android.defaultConfig.versionName}-${variant.buildType.name}.aar"
+//    }
+//}
+
+//dependencies {
+//
+//    implementation libs.androidx.core.ktx
+//    implementation libs.androidx.appcompat
+//    implementation libs.material
+//    implementation libs.androidx.legacy.support.v4
+//    implementation libs.androidx.activity
+//    implementation libs.androidx.constraintlayout
+//
+//    testImplementation libs.junit
+//    androidTestImplementation libs.androidx.junit
+//    androidTestImplementation libs.androidx.espresso.core
+//}
